@@ -15,12 +15,16 @@
     "time": "2020-10-27",
     "repositories": [
         {
+            "type": "vcs",
+            "url": "https://github.com/bytestream/horde-installer-plugin.git"
+        },
+        {
             "type": "composer",
             "url": "https://horde-satis.maintaina.com"
         }
     ],
     "require": {
-        "horde/horde-installer-plugin": "dev-master",
+        "horde/horde-installer-plugin": "dev-composer-2",
         "php": "^5.3 || ^7"
     },
     "suggest": {
