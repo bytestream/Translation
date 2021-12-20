@@ -1,6 +1,6 @@
 {
-    "name": "horde/translation",
-    "description": "Translation library",
+    "name": "bytestream/horde-translation",
+    "description": "Horde Translation library",
     "type": "library",
     "homepage": "https://www.horde.org/libraries/Horde_Translation",
     "license": "LGPL-2.1",
@@ -11,28 +11,20 @@
             "role": "lead"
         }
     ],
-    "version": "2.2.3",
-    "time": "2017-11-11",
-    "repositories": [
-        {
-            "type": "pear",
-            "url": "https://pear.horde.org"
-        }
-    ],
     "require": {
-        "php": "^5.3 || ^7"
+        "php": "^7.4 || ^8.0"
     },
-    "suggest": {
-        "pear-pear.horde.org/Horde_Test": "^2.1",
-        "ext-gettext": "*"
-    },
-    "replace": {
-        "pear-pear.horde.org/Horde_Translation": "2.*",
-        "pear-horde/Horde_Translation": "2.*"
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-0": {
             "Horde_Translation": "lib/"
+        }
+    },
+    "autoload-dev": {
+        "psr-0": {
+            "Horde_Translation": "test"
         }
     }
 }
