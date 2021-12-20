@@ -6,22 +6,25 @@
  * @package    Translation
  * @subpackage UnitTests
  */
-class Horde_Translation_TestBase extends PHPUnit_Framework_TestCase
+class Horde_Translation_TestBase extends \PHPUnit\Framework\TestCase
 {
     private $_env;
 
-    public function setUp()
+    public function setUp(): void
     {
+        parent::setUp();
+
         try {
             $this->setLocale(LC_ALL, 'de_DE.UTF-8');
-        } catch (PHPUnit_Framework_Exception $e) {
+        } catch (\PHPUnit\Framework\Exception $e) {
             $this->markTestSkipped('Setting the locale failed. de_DE.UTF-8 might not be supported.');
         }
         $this->_setEnv('de_DE.UTF-8');
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
+        parent::tearDown();
         $this->_restoreEnv();
     }
 
