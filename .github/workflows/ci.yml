@@ -28,7 +28,7 @@ jobs:
           coverage: pcov
 
       - name: Install language packs
-        uses: sudo apt-get install language-pack-en language-pack-cs language-pack-de language-pack-tr
+        run: sudo apt-get install language-pack-en language-pack-cs language-pack-de language-pack-tr
 
       - name: Install dependencies
         run: composer update --${{ matrix.stability }} --prefer-dist --no-interaction --no-progress
